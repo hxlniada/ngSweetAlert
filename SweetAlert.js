@@ -12,10 +12,14 @@ angular.module('ngSweetAlert', []).factory('SweetAlert', [
         // public methods
         var self = {
 
-            swal: function (arg1) {
+            swal: function (arg1, arg2) {
                 var deferrd = $q.defer();
 
                 swal(arg1, function (isConfirm) {
+                    if (angular.isFunction(arg2)) {
+                        arg2(isConfirm);
+                    }
+
                     if (isConfirm) {
                         deferrd.resolve();
                     }
