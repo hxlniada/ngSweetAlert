@@ -1,8 +1,6 @@
 /**
-@fileOverview
-
-@toc
-
+ * @file angular-sweet-alert
+ * @author huangxueliang@baidu.com
 */
 
 'use strict';
