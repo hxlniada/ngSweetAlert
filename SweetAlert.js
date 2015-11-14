@@ -50,7 +50,16 @@ angular.module('ngSweetAlert', []).factory('SweetAlert', [
                     swal(title, message, 'info');
                 });
             }
-
+            showInputError: function (message) {
+			    $rootScope.$evalAsync(function () {
+    	            swal.showInputError(message);
+    	        });
+    		},
+    		close: function () {
+    			$rootScope.$evalAsync(function (){
+    	            swal.close();
+    	        });
+    		}
         };
         return self;
     }
