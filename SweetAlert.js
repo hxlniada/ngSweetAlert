@@ -49,7 +49,7 @@ angular.module('ngSweetAlert', []).factory('SweetAlert', [
                 $rootScope.$evalAsync(function () {
                     swal(title, message, 'info');
                 });
-            }
+            },
             showInputError: function (message) {
 		$rootScope.$evalAsync(function () {
     	            swal.showInputError(message);
